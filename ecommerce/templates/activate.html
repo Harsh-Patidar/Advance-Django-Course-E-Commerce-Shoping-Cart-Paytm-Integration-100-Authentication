@@ -1,0 +1,8 @@
+{% autoescape off %}
+
+Hi {{user.username}}
+{% comment %} Please Click This Link below to verify your account {% endcomment %}
+
+http://{{domain}} {% url 'activate' uidb64=uid token=token %}
+
+{% endautoescape %}
